@@ -7,7 +7,7 @@ import rocks.zipcode.assessment2.fundamentals.StringUtils;
 /**
  * @author leon on 28/11/2018.
  */
-public class IsSpecialCharacter {
+public class IsSpecialCharacterTest {
     @Test
     public void alphaStringTest1() {
         // Given
