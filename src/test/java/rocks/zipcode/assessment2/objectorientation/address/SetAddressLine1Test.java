@@ -7,16 +7,16 @@ import rocks.zipcode.assessment2.objectorientation.Address;
 /**
  * @author leon on 28/11/2018.
  */
-public class SetAddressLine2 {
+public class SetAddressLine1Test {
     @Test
     public void test1() {
         // Given
         Address address = new Address();
-        String expected = "jtrydjkyrh";
+        String expected = "f3w4fewafewf";
 
         // when
-        address.setAddressLine2(expected);
-        String actual = address.getAddressLine2();
+        address.setAddressLine1(expected);
+        String actual = address.getAddressLine1();
 
         // then
         Assert.assertEquals(expected, actual);
@@ -26,11 +26,11 @@ public class SetAddressLine2 {
     public void test2() {
         // Given
         Address address = new Address();
-        String expected = "y7hst4sgresgter";
+        String expected = "2t32tfdsag43h";
 
         // when
-        address.setAddressLine2(expected);
-        String actual = address.getAddressLine2();
+        address.setAddressLine1(expected);
+        String actual = address.getAddressLine1();
 
         // then
         Assert.assertEquals(expected, actual);
