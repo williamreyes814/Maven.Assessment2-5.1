@@ -15,6 +15,8 @@
 
 ## Getting Started
 
+Get the most tests to pass as you can.
+
 ### Setting up the project
 * Ensure that the tests run upon opening the project.
 	* You should see, `Tests Failed: 159 of 159 tests`
