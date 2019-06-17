@@ -1,4 +1,7 @@
 package rocks.zipcode.assessment2.generics;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 
 /**
@@ -17,24 +20,33 @@ public class Shelter<_> {
      * @return the number of item in the shelter
      */
     public int size() {
-        return -1;
+
+
+        return 0;
     }
 
     public void add(Object object) {
     }
 
     public Boolean contains(Object object) {
+
+
         return null;
     }
 
     public void remove(Object object) {
+
     }
 
     public Object get(Integer index) {
+
+
         return null;
     }
 
     public Integer getIndexOf(Object ageable) {
+
+
         return 0;
     }
 }

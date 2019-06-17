@@ -1,5 +1,7 @@
 package rocks.zipcode.assessment2.fundamentals;
 
+import java.util.Formatter;
+
 /**
  * @author leon on 28/11/2018.
  */
@@ -10,7 +12,11 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+
+
+
+
+        return  String.format("%" + amountOfPadding + "s", stringToBePadded);
     }
 
     /**
@@ -19,8 +25,11 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by right-padding
      */
     public static String padRight(String stringToBePadded, int amountOfPadding) {
-        return null;
+
+        return  String.format("%-" + amountOfPadding + "s", stringToBePadded);
+
     }
+
 
     /**
      * @param stringToBeRepeated - string value to be repeated
@@ -36,7 +45,18 @@ public class StringUtils {
      * @return - true if string only contains alpha characters
      */
     public static Boolean isAlphaString(String string) {
-        return null;
+
+
+
+        if(string == "[a-zA-Z0-9]+"){
+
+            return  true;
+        }
+        else{
+            return false;
+        }
+
+
     }
 
     /**
@@ -44,7 +64,12 @@ public class StringUtils {
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
+
+        if(string == "0-9")
+        return true;
+        else{
+            return  false;
+        }
     }
 
     /**
@@ -52,6 +77,10 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return null;
+
+        String splChrs = "-/@#$%^&_+=()" ;
+        boolean found = string.matches("[" + splChrs + "]+");
+
+        return found;
     }
 }

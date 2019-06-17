@@ -1,5 +1,7 @@
 package rocks.zipcode.assessment2.fundamentals;
 
+import rocks.zipcode.assessment2.arrays.StringArrayUtils;
+
 public class BasicStringUtils {
     /**
      * @param string1 - Base string to be added to
@@ -7,7 +9,10 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+
+
+
+        return string1+string2;
     }
 
     /**
@@ -15,7 +20,16 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+
+
+        // Java does not have a reverse function, need to convert input1 string to StringBuilder
+        StringBuilder input1 = new StringBuilder();
+        // append a string into StringBuilder
+        input1.append(string1);
+        // this reverses the order
+        input1.reverse();
+        // this converts the StringBuilder back to a string
+        return input1.toString();
     }
 
     /**
@@ -24,7 +38,12 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+
+        String reverseString1 = reverse(string1);
+        String reverseString2 = reverse(string2);
+
+
+        return reverseString1+reverseString2;
     }
 
     /**
@@ -33,7 +52,16 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+
+        String[] removeString  = charactersToRemove.split("");
+        String newString = string;
+        for(String letter: removeString){
+
+            newString = newString.replace(letter, "");
+        }
+
+
+        return newString;
     }
 
     /**
@@ -42,6 +70,10 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+
+
+       //String charRemoved = removeCharacters(string, charactersToRemove);
+
+        return reverse(removeCharacters(string, charactersToRemove));
     }
 }
